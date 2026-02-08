@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>کتابخانه شخصی</title>
+    <link rel="stylesheet" href="./public/css/styles.css" />
+  </head>
+  <body onload="fetchBooksFromLocalStorage()">
+    <header>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        class="size-12"
+      >
+        <path
+          d="M11.25 4.533A9.707 9.707 0 0 0 6 3a9.735 9.735 0 0 0-3.25.555.75.75 0 0 0-.5.707v14.25a.75.75 0 0 0 1 .707A8.237 8.237 0 0 1 6 18.75c1.995 0 3.823.707 5.25 1.886V4.533ZM12.75 20.636A8.214 8.214 0 0 1 18 18.75c.966 0 1.89.166 2.75.47a.75.75 0 0 0 1-.708V4.262a.75.75 0 0 0-.5-.707A9.735 9.735 0 0 0 18 3a9.707 9.707 0 0 0-5.25 1.533v16.103Z"
+        />
+      </svg>
+      <h1> کتابخانه شخصی</h1>
+    </header>
+    <section class="hero">
+      <p>تعداد کتابها: <span class="books-count">0</span></p>
+
+      <button class="open-modal">ایجاد کتاب</button>
+    </section>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col" class="px-6 py-3">عنوان کتاب</th>
+          <th scope="col" class="px-6 py-3">نویسنده (یا مترجم)</th>
+          <th scope="col" class="px-6 py-3">سال انتشار</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Book info loaded from js -->
+      </tbody>
+    </table>
+
+    <div class="modal-screen hidden">
+      <article class="modal">
+        <header class="modal-header">
+          <span>ایجاد کتاب جدید</span>
+          <button class="close-x-button">X</button>
+        </header>
+        <main>
+          <div class="input-card">
+            <input
+              type="text"
+              class="title-input"
+              placeholder="نام کتاب را وارد نمائید ..."
+            />
+          </div>
+          <div class="input-card">
+            <input
+              type="text"
+              class="author-input"
+              placeholder="نام ناشر را وارد نمائید ..."
+            />
+          </div>
+          <div class="input-card">
+            <input
+              type="text"
+              class="release-input"
+              placeholder="سال تولید را وارد نمائید ..."
+            />
+          </div>
+        </main>
+        <footer class="modal-buttons">
+          <button class="close">انصراف</button>
+          <button class="continue">ایجاد کتاب</button>
+        </footer>
+      </article>
+    </div>
+
+    <footer class="copyright">&copy; Developed with 💚 By Mohammad Naghavi</footer>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>
